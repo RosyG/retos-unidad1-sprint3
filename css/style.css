@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;/*para que los elemento no se desborden*/
+}
+.container {
+  max-width: 1200px;/*Hace que se ajuste a 1200px al cargarse la página. */
+  width: 93%; /*es lo mismo que 1200px.*/
+  margin: 0 auto; /*para centrar el contenedor.*/
+  background-image: url("../img/dawn.png");
+  border: 1px solid black;
+  height: 31.5em;
+}
+.img-cat {
+  margin-top: 15em;
+  height: 16em;
+  background-repeat: no-repeat;
+  background-color: red;
+  /*background-image: url("../img/kitten-large.png");*/
+}
+.container-back {
+  background-image: url("../img/dawn.png");
+  background-repeat: no-repeat;
+}
+
+
+
+
+/*Modificando la visualización de escritorio a móvil */
+/*@media screen and (max-width: 768px) {
+  .colum-9, .colum-3 {
+    width: 100%; /*posicionando al contenido lateral (C) debajo del contenido principal (B)*/
+  }
+/*  .colum-3 {
+    height: 7em;
+  }
+}
+/*medidas de las pantallas que serán especificadas*/
+/*@media screen and ( min-width : 780px) and ( max-width : 1024px) {
+.A-encabezado {
+background-color: orange;
+}
+
+}*/
+/*@media screen and (min-width: 480px) and (max-width: 780px) {
+.B-contenido, .C-contenido-lateral, .A-encabezado {
+width: 100%; /*posicionando al contenido lateral (C) debajo del contenido principal (B)*/
+/*  }
+
+}*/
+/*handheld, se usa para pequeños dispositivos de mano, como móviles*/
