@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;/*para que los elemento no se desborden*/
+}
+.container {
+  max-width: 1200px;/*Hace que se ajuste */
+  width: 100%; /*es lo mismo que 1200px.*/
+  margin: 0 auto; /*para centrar el contenedor.*/
+  background-color: pink;
+}
+/*Definiendo las filas-rows*/
+[class*="row-"] {
+  min-height: 14px;/*altura mínima para la fila, aunque este vacía*/
+}
+[class*="row-"]:before {
+  content: "";/*Entre cada row habra un espacio vacío*/
+  display: table;/*comportamiendo de tabla.*/
+}
+[class*="row-"]:after {
+  clear: both; /*limpia el float.*/
+}
+/*Definiendo caracteristicas de las columnas.*/
+[class*="colum-"] {
+  float: left;/*Sirve para ir acomodando a las columnas a la izquierada.*/
+  min-height: 7px;/*minimo aunque no haya nada, 7px es un estándar*/
+  height: 3em;/*Altura de los contenedores fija*/
+  padding: 12px;/*Creando gutters, espacio entre columnas*/
+  background-color: blue;
+  border: 7px solid white;
+}
+
+/*Definición de los anchos de las columnas*/
+.colum-1 {
+  width: 8.33%; background-color: #FFFF00}
+.colum-2 {width: 16.66%; background-color: #AFFF00}
+.colum-3 {width: 25%; background-color: #24CF9B}
+.colum-4 {width: 33.33%; background-color: #01B6AD}
+.colum-5 {width: 41.66%}
+.colum-6 {width: 50%; background-color: #9C42D1}
+.colum-7 {width: 58.33%}
+.colum-8 {width: 66.66%}
+.colum-9 {width: 75%}
+.colum-10 {width: 83.33%}
+.colum-11 {width: 91.66%}
+.colum-12 {width: 100%; background-color: #D126A9}
