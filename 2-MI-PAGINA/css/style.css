@@ -172,16 +172,24 @@
   }
   #space-row3 {
     width: 0%;
-    height: 0em;
+    height: 0%;
+  }
+  #space-row4 {
+    width: 0%;
+    height: 0%;
   }
   #contact {
     width: 100%;
+  }
+  .row-4 > .colum-2 {
+    height: 0%;
   }
   .colum-2 {
     width: 100%;
   }
   .row-6 > .colum-3 {
     width: 100%;
+    height: 2%;
   }
   .row-7 > .colum-1 {
     width: 0%;
