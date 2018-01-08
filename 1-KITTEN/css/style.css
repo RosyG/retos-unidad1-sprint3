@@ -1,85 +1,61 @@
 * {
   box-sizing: border-box;/*para que los elemento no se desborden*/
 }
+
 .container {
-  /*max-width: 1200px;/*Hace que se ajuste a 1200px al cargarse la página. */*/
-  width: 100%; /*es lo mismo que 1200px.*/
+  background-size: 100% 100%;
   margin: 0 auto; /*para centrar el contenedor.*/
-  background-image: url("../img/dawn.png");
-  background-repeat: no-repeat;
-  height: 100vh;
-
-
-/*  background-image: url("../img/sunny-day.jpg");*/
-  /*background-image: url("../img/dawn.png");
-  background-position: center;
-  background-repeat: no-repeat;
-
-  background-size: 100%;*/
-}
-#img-cat {
-  border: 1px solid white;
-  background-image: url("../img/kitten-large.png");
-  background-repeat: no-repeat;
-  background-size: 88% 100%;
-  height: 15em;
-}
-/*Definiendo columns & rows*/
-
-[class*="row-"]:before {
-  content: "";
-  display: table;/*comportamiendo de tabla.*/
-  /*min-height: 1em;/*minimo aunque no haya nada, 7px es un estándar*/
-}
-[class*="row-"]:after {
-  clear: both; /*limpia el float.*/
-}
-/*Definiendo caracteristicas de las columnas.*/
-[class*="colum-"] {
-  float: left;/*Sirve para ir acomodando a las columnas a la izquierada.*/
-/*  min-height: 7px;/*minimo aunque no haya nada, 7px es un estándar*/
-  padding: 1em;/*Creando gutters, espacio entre columnas*/
-  height: 16em;
+  height: 90vh;/*Altura para el contenedor de las imagenes.*/
 }
 
-/*Todas las clases que tengan nombre de clase num-colum, van a tener los siguientes estilo*/
-/*(100/12)*num de columnas*/
-.colum-1 {width: 8.333333333333332%}
-.colum-2 {width: 16.666666666666664%}
-.colum-3 {width: 25%}
-.colum-4 {width: 33.33333333333333%}
-.colum-5 {width: 41.66666666666667%}
-.colum-6 {width: 50%}
-.colum-7 {width: 58.333333333333336%}
-.colum-8 {width: 66.66666666666666%}
-.colum-9 {width: 75%}
-.colum-10 {width: 83.33333333333334%}
-.colum-11 {width: 91.66666666666666%}
-.colum-12 {width: 100%}
-
+.container > section{
+    max-width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;/*para que las medidas del gato sean con respecto a su padre el contenedor, que a su vez tiene el fondo*/
+}
 
 /*Modificando la visualización de escritorio a móvil */
 @media (max-width: 412px) {
   .container {
     background-image: url("../img/dawn.png");
+    height: 80vh;
+    background-size: 100% 50%;
     background-repeat: no-repeat;
-    height: 100vh;
   }
-  }/*handheld, se usa para pequeños dispositivos de mano, como móviles*/
-
-  @media (min-width: 413px) and (max-width: 999px){
-    .container {
-      background-image: url("../img/night.jpg");
-      background-repeat: no-repeat;
-    }
+  .img-cat {
+    background-image: url("../img/kitten-large.png");
+    height: 22%;
+    margin-top: 25%;
+    width: 63%;
+    margin-left: 17%;
   }
+}/*handheld, se usa para pequeños dispositivos de mano, como móviles*/
 
-/*@media (min-width: 1000px){
+@media (min-width: 413px) and (max-width: 999px){
   .container {
-background-image: url("../img/sunny-day.jpg");
-    background-repeat: no-repeat;
-
-    }
+    background-image: url("../img/night.jpg"); height: 50vh;
   }
-*/
+  .img-cat {
+    background-image: url("../img/kitten-small.png");
+    height: 40%;
+    width: 60%;
+    margin: 5% 20% 0%;
+  }
+}
+
+
+@media  (min-width: 1000px){
+/*Se mantiene hasta 1024*/
+  .container {
+    background-image: url("../img/sunny-day.jpg");
+  }
+
+  .img-cat {
+    background-image: url("../img/kitten-medium.png");
+    height: 30%;
+    width: 63%;
+    margin: 18% 18% 0%;
+  }
+}
 /*medidas de las pantallas que serán especificadas*/
