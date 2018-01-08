@@ -1,12 +1,107 @@
+
 * {
   box-sizing: border-box;/*para que los elemento no se desborden*/
 }
 .container {
-  max-width: 1200px;/*Hace que se ajuste */
+  max-width: 1200px;/*Hace que se ajuste a los 1920px de ancho */
   width: 100%; /*es lo mismo que 1200px.*/
   margin: 0 auto; /*para centrar el contenedor.*/
-  background-color: pink;
+  background-image: url("../img/background.jpg");
+  overflow: auto;/*Adaptando el contenedor de acuerdo a su contenido en altura*/
 }
+/*ESTILOS DEL ENCABEZADO*/
+#header {
+  height: 4em;
+  color: white;
+}
+#header > a {
+  list-style: none;
+  padding: auto 0.5em;
+  color: white;
+}
+
+/*ESTILOS DEL BANNER*/
+#banner {
+  background-color: rgba(219, 24, 43, 0.6);
+  background-repeat: no-repeat;
+  background-size: cover;/*Adaptando a la imagen a su contenedor*/
+  height: 400px;
+}
+/*ESTILO EN INFORMACIÓN Y DATOS.*/
+#item {
+
+}
+#contact {
+
+}
+/*ESTILO DEL BOTÓN CALL TO ACTION.*/
+#button-call {
+    background-color: #2A8EFF;
+    border-radius: 5%;
+    color: white;
+    padding: 1em;
+    height: 1.5em;
+}
+#space {
+    height: 3.5em;
+}
+.row-5 > .colum-2 {
+  height: 3.5em;
+}
+/*ESTILO DE IMAGENES Y SU TEXTO.*/
+[id *= "article-img-"] {
+  height: 200px;
+  margin-bottom: 5%;
+  background-size: cover;/*Adaptando a la imagen a su contenedor*/
+}
+#article-img-1 {
+  background-image: url("../img/one.jpg");
+}
+#article-img-2 {
+  background-image: url("../img/two.jpg");
+}
+#article-img-3 {
+  background-image: url("../img/three.jpg");
+}
+/*Texto.*/
+#text-card {
+  color: white;
+  height: 100px;
+  overflow: auto;
+}
+.row-6 > .colum-1 {
+  height: 380px;
+}
+.row-6 > .colum-3 {
+  margin-right: 2.7%;
+}
+#space-row7 {
+  height: 5em;
+}
+/*ESTILO DEL BOTÓN FIND OUT MORE.*/
+#button-find-out {
+  background-color: #2A8EFF;
+  border-radius: 5%;
+  color: white;
+  padding: 5%;
+}
+.row-7 > .colum-3 {
+  border-bottom: 2px solid #016E63;
+  margin-right: 2.7%;
+  height: 4em;
+  padding: 2% 1%;
+}
+/*ESTILO DEL FOOTER*/
+.row-8 > .colum-4 {
+  background-color: black;
+  height: 4em;
+  color: white;
+  font-size: small;
+}
+.row-8 > .colum-4 > p , span {
+  text-align: center;
+}
+
 /*Definiendo las filas-rows*/
 [class*="row-"] {
   min-height: 14px;/*altura mínima para la fila, aunque este vacía*/
@@ -22,23 +117,97 @@
 [class*="colum-"] {
   float: left;/*Sirve para ir acomodando a las columnas a la izquierada.*/
   min-height: 7px;/*minimo aunque no haya nada, 7px es un estándar*/
-  height: 3em;/*Altura de los contenedores fija*/
   padding: 12px;/*Creando gutters, espacio entre columnas*/
-  background-color: blue;
-  border: 7px solid white;
+  height: 10em;/*CUANTO TERMINE, BORRAR*/
 }
 
 /*Definición de los anchos de las columnas*/
-.colum-1 {
-  width: 8.33%; background-color: #FFFF00}
-.colum-2 {width: 16.66%; background-color: #AFFF00}
-.colum-3 {width: 25%; background-color: #24CF9B}
-.colum-4 {width: 33.33%; background-color: #01B6AD}
+.colum-1 {width: 8.33%}
+.colum-2 {width: 16.66%}
+.colum-3 {width: 25%}
+.colum-4 {width: 33.33%}
 .colum-5 {width: 41.66%}
-.colum-6 {width: 50%; background-color: #9C42D1}
+.colum-6 {width: 50%}
 .colum-7 {width: 58.33%}
 .colum-8 {width: 66.66%}
 .colum-9 {width: 75%}
 .colum-10 {width: 83.33%}
 .colum-11 {width: 91.66%}
-.colum-12 {width: 100%; background-color: #D126A9}
+.colum-12 {width: 100%}
+
+/*ESTRUCTURA DE MEDIA para el tamaño móvil*/
+@media (min-width: 360px) and (max-width: 769px){
+  .container {
+    background-image: url("../img/background-media.jpg");
+    background-size: cover;
+    overflow: auto;/*Adaptando el contenedor de acuerdo a su contenido en altura*/
+    /*background-size: cover;
+    background-repeat: repeat-y;
+    overflow-x: hidden;*/
+  }
+  #header {
+    background-color: rgba(200,225,255,0.6);
+    height: 6em;
+    color: black;
+    width: 20%;
+  }
+  #header > a {
+    color: black;
+    width: 10%;
+  }
+  #banner {
+    background-color: rgba(65, 121, 157, 0.5);
+    height: 200px;
+    width: 100%;
+  }
+  #space {
+    width: 0%;
+    height: 0em;
+  }
+  #item {
+    width: 100%;
+    background-size: cover;/*Adaptando a la imagen a su contenedor*/
+    overflow: hidden;
+
+  }
+  #space-row3 {
+    width: 0%;
+    height: 0em;
+  }
+  #contact {
+    width: 100%;
+  }
+  .colum-2 {
+    width: 100%;
+  }
+  .row-6 > .colum-3 {
+    width: 100%;
+  }
+  .row-7 > .colum-1 {
+    width: 0%;
+    padding: 0px;
+  }
+  .row-7 > .colum-3 {
+    padding: 0%;
+    margin-right: 0%;
+    height: 2em;
+  }
+  #button-find-out {
+    width: 33%;
+    font-size: small;
+  }
+  #copyright {
+    height: 2em;
+  }
+  .row-8 > .colum-4 {
+    width: 25%;
+    height: 4em;
+    padding: 0px;
+  }
+  .row-8 > .colum-4 > p {
+    background-color: black;
+    font-size: small;
+    height: 3em;
+  }
+
+}
